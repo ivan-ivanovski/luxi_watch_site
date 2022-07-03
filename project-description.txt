@@ -1,0 +1,33 @@
+Овој проект се однесува за презентирање на часовници изработени
+
+Хиархија на проект
+
+-----------------------------------------------------------
+Header
+  Top navigation part one
+   logo search sign in/out cart
+  Top navigation part two - navigation menu:
+   Home About Us Products Contact How to order
+Hero section
+   full background image 
+   title at center, subtitle at center and button 
+Main section
+   Products Category
+    3-4 categories of product, men, women, phone cases and etc
+   Aside 
+	two image inline
+	img-1 
+		text and btn at center
+	img-2
+		text and btn at center
+   Some products section
+	product 1 product 2 etc
+	All products shown on landing page has
+	article id, article name and price, also add to cart button and click event to take
+	user to product page of article
+   Comments from clients section
+   Instagram gallery 
+	at bottom btn with link to instagram page
+Footer section
+	
+-----------------------------------------------------------
