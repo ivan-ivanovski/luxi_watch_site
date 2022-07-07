@@ -20,6 +20,90 @@ body{
         padding: 0 ;
         margin: 0 auto;
         overflow: hidden;
+        background-color: #eee;
+        .nav-mobile{
+            display: none;
+            nav{
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                text-align: center;
+                display: none;
+                .top-mobile-nav{
+                    width: 100%;
+                    padding: 10px;
+                    display: grid;
+                    grid-template-areas: 'logo-mobile-left-pos nav-account-logo nav-shop-card fa-bars-end-right-pos';
+                    .nav-brend{
+                        display: block;
+                        width: auto;
+                        grid-area: logo-mobile-left-pos;
+                        padding: 5px;
+                        a{
+                            display: block;
+                            letter-spacing: -1px;
+                            font-weight: 300;
+                            font-size: 1.5rem;
+                            text-decoration: none;
+                            color: rgb(146, 85, 5);
+                        }
+                    }
+                    .nav-account{
+                        display: block;
+                        width: auto;
+                        padding: 10px;
+                        grid-area: nav-account-logo;
+                        a{
+                            display: block;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            color: black;
+                            i{
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                    .nav-shop-card{
+                        display: block;
+                        grid-area:nav-shop-card;
+                        width: auto;
+                        padding: 10px;
+                        a{
+                            display: block;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            color: black;
+                            i{
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                    .fa-bars{
+                        cursor: pointer;
+                        width: auto;
+                        color: rgb(63, 62, 62);
+                        font-size: 32px;
+                        padding: 5px;
+                        grid-area: fa-bars-end-right-pos;
+                    }
+                }
+                
+               
+                .nav-menu{
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    a{
+                        display: block;
+                        padding: 10px;
+                        text-decoration: none;
+                        color: rgb(34, 34, 33);
+                        font-size: 18px;
+                        
+                    }
+                }
+            }
+        }
         .navigation-container{
             width: 100%;
             height: auto;
@@ -193,7 +277,7 @@ body{
             display: block;
         }
         section.products-category{
-            width: 1366px;
+            width: 100%;
             height: auto;
             margin: 0 auto;
             text-align: center;
@@ -394,15 +478,16 @@ body{
                             grid-area: art-price;
                         }
                         .add-to-card{
+                            background-color: transparent;
                             display: block;
                             cursor: pointer;
                             width: 150px;
-                            border: 1px solid rgba(26, 12, 2, 0.384);
+                            border: 2px solid rgb(87, 80, 72);
                             border-radius: 100vmax;
-                            color: black;
+                            color: #000;
                             grid-area: add-card;
                             margin: 10px auto;
-                            padding: 5px;
+                            padding: 10px;
                         }
                     }
                 }
@@ -454,6 +539,14 @@ body{
                     border: 1px solid #000;
                 }
             }
+            .btnSeeMorePhotos{
+                width: 200px;
+                text-align: center;
+                justify-content: center;
+                padding: 10px;
+                margin: 10px auto;
+                text-decoration: none;
+            }
             .gallery-container{
                 display: block;
                 margin-top: 10px;
@@ -477,7 +570,9 @@ body{
                                 width: 100%;
                                 height: 100%;
                             }
-                
+                        }
+                        a#img-4-mobile{
+                            display: none;
                         }
                     }
                         
@@ -518,6 +613,12 @@ body{
                         }
                     }
                 }
+            }
+            .btnSeeMorePhotos{
+                width: 200px;
+                display: block;
+                margin: 5px auto;
+                padding: 10px;
             }
         }
     }
@@ -570,7 +671,7 @@ body{
                         }
                         input[type=submit]{
                             cursor: pointer;
-                            width: 20%;
+                            width: 150px;
                             height: auto;
                             margin: 10px auto;
                             background-color: rgba(0, 0, 0, 0);
@@ -648,3 +749,530 @@ body{
     }
 
 }
+$breakpoint-mobile:640px;
+$breakpoint-mobile-small: 292px;
+@media (max-width: $breakpoint-mobile) {
+  body{
+    display: block;
+    header.navigation{
+        background-color: transparent !important;
+        .navigation-container{
+            flex:none;
+            display: none;
+        }
+        .nav-mobile{
+            display: block;
+            background-color: transparent !important;
+            nav{
+                display: block; 
+                position: fixed;
+                z-index: 999;
+                background-color: #eee;
+                .nav-menu{
+                    width: 100%;
+                    display: none;
+                    height: auto;
+                    a{
+                        width: 100%;
+                        display: block;
+                    }
+                    a:hover{
+                        color: rgb(146, 85, 5);
+                    }
+                }
+            }       
+        }   
+      }
+      main{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        section.image-wrapper{
+            display: block;
+            .row{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .col-md-4{
+                    display: block;
+                    width: 100%;
+                    height: 70vh;
+                }
+            }
+        }
+        .trending-products{
+            display: block;
+            width: 100%;
+            height: auto;
+            .title{
+                h2{
+                    font-size: 32px;
+                }
+            }
+            .container-products{
+                flex: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                .product-item{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-content: center;
+                    margin: 10px auto;
+                    .product-image{
+                        display: block;
+                        width: 50vw;
+                        text-align: center;
+                        margin: 0 auto;
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+        section.instagram-galery{
+            .title{
+                display: block;
+            }
+            .gallery-container{
+                display: block;
+                .row{
+                    width: 100%;
+                   
+                    .col{
+                        width: 100%;
+                        height: auto;
+                        display: grid;
+                        grid-template-areas: 'img-insta-1 img-insta-2''img-insta-3 img-insta-4-mobile''img-insta-5 img-insta-6''img-insta-7 img-insta-8';
+                        a#img-1{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-1;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-2{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-2;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-3{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-3;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-4{
+                            width: 50vw;
+                            height: 50vh;
+                            display: none;
+                            border: 4px solid black;
+                            grid-area: img-insta-4;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-4-mobile{
+                            display: block;
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-4-mobile;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-5{
+
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-5;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-6{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-6;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-7{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-7;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-8{
+                            width: 50vw;
+                            height: 50vh;
+                            display: block;
+                            border: 4px solid black;
+                            grid-area: img-insta-8;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        a#img-9{
+                            width: 50vw;
+                            height: 50vh;
+                            display:none;
+                            border: 4px solid black;
+                            grid-area: img-insta-9;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            a.btnSeeMorePhotos{
+                display: block;
+                width: 200px;
+                text-align: center;
+                justify-content: center;
+                padding: 10px;
+                margin: 10px auto;
+                text-decoration: none;
+                font-size: 24px;
+                color: rgb(63, 62, 62);
+            }
+        }
+      }
+      footer{
+        display: block;
+        .footer-header{
+            width: 100%;
+            grid:none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .row{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .col-md-3{
+                    width: 100%;
+                    text-align: left;
+                }
+
+            }
+        }
+      }
+  } 
+  
+}
+@media (max-width: $breakpoint-mobile-small) {
+    body{
+      display: block;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      width: 100%;
+      section.background-image{
+        display: block;
+        width: 100%;
+        .title{
+            width: 100%;
+            h1{
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 1rem;
+            }
+            .btn-see-producs{
+                display: block;
+                a{
+                    margin-top: 50px;
+                }
+            }
+        }
+        
+      }
+      header.navigation{
+          background-color: transparent !important;
+          .navigation-container{
+              flex:none;
+              display: none;
+          }
+          .nav-mobile{
+              display: block;
+              background-color: transparent !important;
+              nav{
+                  display: block; 
+                  position: fixed;
+                  z-index: 999;
+                  background-color: #eee;
+                  .nav-menu{
+                      width: 100%;
+                      display: none;
+                      height: auto;
+                      a{
+                          width: 100%;
+                          display: block;
+                      }
+                      a:hover{
+                          color: rgb(146, 85, 5);
+                      }
+                  }
+              }       
+          }   
+        }
+
+        main{
+          width: 100%;
+          overflow: hidden;
+          display: block;
+            section.products-category{
+                .title{
+                    display: block;
+                    text-align: left;
+                }
+                .category-container{
+                    width: 100%;
+                    display: grid;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    grid-template-areas: 'cat-item-1 cat-item-2';
+                    .cat-item{
+                        display: block;
+                        width: 50vw;
+                        height: auto;
+                        padding: 10px;
+                    }
+                    #cat-item-1{
+                        grid-area: cat-item-1;
+                    }
+                
+                    #cat-item-2{
+                        grid-area: cat-item-2;
+                    }
+                    
+                    #cat-item-3{
+                        display: none;
+                    }
+                    #cat-item-4{
+                        display: none;
+                    }
+                }
+
+            }
+          section.image-wrapper{
+              display: block;
+              .row{
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  .col-md-4{
+                      display: block;
+                      width: 100%;
+                      height: 70vh;
+                  }
+              }
+          }
+          .trending-products{
+              display: block;
+              width: 100%;
+              height: auto;
+              .title{
+                  h2{
+                      font-size: 32px;
+                  }
+              }
+              .container-products{
+                 width: 100%;
+                  flex: none;
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  justify-content: center;
+                  align-items: center;
+                  align-content: center;
+                  .product-item{
+                      width: 100%;
+                      height: auto;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-evenly;
+                      align-content: center;
+                      margin: 10px auto;
+                      border: none;
+                      .product-image{
+                          display: block;
+                          width: 100%;
+                          text-align: center;
+                          margin: 0 auto;
+                          img{
+                              display: block;
+                              margin: 0 auto;
+                          }
+                      }
+                  }
+              }
+          }
+          section.instagram-galery{
+              .title{
+                  display: block;
+              }
+              .gallery-container{
+                  display: block;
+                  .row{
+                      width: 100%;
+                     
+                      .col{
+                          width: 100%;
+                          height: auto;
+                          display: grid;
+                          grid-template-areas: 'img-insta-1 img-insta-2''img-insta-3 img-insta-4-mobile''img-insta-5 img-insta-6''img-insta-7 img-insta-8';
+                          a#img-1{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-1;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-2{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-2;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-3{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-3;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-4{
+                              width: 50vw;
+                              height: 50vh;
+                              display: none;
+                              border: 4px solid black;
+                              grid-area: img-insta-4;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-4-mobile{
+                              display: block;
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-4-mobile;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-5{
+  
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-5;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-6{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-6;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-7{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-7;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-8{
+                              width: 50vw;
+                              height: 50vh;
+                              display: block;
+                              border: 4px solid black;
+                              grid-area: img-insta-8;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                          a#img-9{
+                              width: 50vw;
+                              height: 50vh;
+                              display:none;
+                              border: 4px solid black;
+                              grid-area: img-insta-9;
+                              img{
+                                  width: 100%;
+                              }
+                          }
+                      }
+                  }
+              }
+              a.btnSeeMorePhotos{
+                  display: block;
+                  width: 200px;
+                  text-align: center;
+                  justify-content: center;
+                  padding: 10px;
+                  margin: 10px auto;
+                  text-decoration: none;
+                  font-size: 24px;
+                  color: rgb(63, 62, 62);
+              }
+          }
+        }
+    } 
+  }

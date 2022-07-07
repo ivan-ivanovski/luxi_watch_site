@@ -23,6 +23,110 @@ body header.navigation {
   padding: 0;
   margin: 0 auto;
   overflow: hidden;
+  background-color: #eee;
+}
+
+body header.navigation .nav-mobile {
+  display: none;
+}
+
+body header.navigation .nav-mobile nav {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  display: none;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav {
+  width: 100%;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'logo-mobile-left-pos nav-account-logo nav-shop-card fa-bars-end-right-pos';
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-brend {
+  display: block;
+  width: auto;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo-mobile-left-pos;
+  padding: 5px;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-brend a {
+  display: block;
+  letter-spacing: -1px;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #925505;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-account {
+  display: block;
+  width: auto;
+  padding: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nav-account-logo;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-account a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-account a i {
+  font-size: 22px;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-shop-card {
+  display: block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav-shop-card;
+  width: auto;
+  padding: 10px;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-shop-card a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .nav-shop-card a i {
+  font-size: 22px;
+}
+
+body header.navigation .nav-mobile nav .top-mobile-nav .fa-bars {
+  cursor: pointer;
+  width: auto;
+  color: #3f3e3e;
+  font-size: 32px;
+  padding: 5px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: fa-bars-end-right-pos;
+}
+
+body header.navigation .nav-mobile nav .nav-menu {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+body header.navigation .nav-mobile nav .nav-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #222221;
+  font-size: 18px;
 }
 
 body header.navigation .navigation-container {
@@ -267,7 +371,7 @@ body main section {
 }
 
 body main section.products-category {
-  width: 1366px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   text-align: center;
@@ -536,18 +640,19 @@ body main .trending-products .container-products .product-item .product-descript
 }
 
 body main .trending-products .container-products .product-item .product-description .add-to-card {
+  background-color: transparent;
   display: block;
   cursor: pointer;
   width: 150px;
-  border: 1px solid rgba(26, 12, 2, 0.384);
+  border: 2px solid #575048;
   border-radius: 100vmax;
-  color: black;
+  color: #000;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: add-card;
   margin: 10px auto;
-  padding: 5px;
+  padding: 10px;
 }
 
 body main section.inspire-me {
@@ -605,6 +710,17 @@ body main section.instagram-galery .title hr {
   border: 1px solid #000;
 }
 
+body main section.instagram-galery .btnSeeMorePhotos {
+  width: 200px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin: 10px auto;
+  text-decoration: none;
+}
+
 body main section.instagram-galery .gallery-container {
   display: block;
   margin-top: 10px;
@@ -640,6 +756,10 @@ body main section.instagram-galery .gallery-container .row .item-1 a {
 body main section.instagram-galery .gallery-container .row .item-1 a img {
   width: 100%;
   height: 100%;
+}
+
+body main section.instagram-galery .gallery-container .row .item-1 a#img-4-mobile {
+  display: none;
 }
 
 body main section.instagram-galery .gallery-container .row .item-2 {
@@ -690,6 +810,13 @@ body main section.instagram-galery .gallery-container .row .item-3 a {
 body main section.instagram-galery .gallery-container .row .item-3 a img {
   width: 100%;
   height: 100%;
+}
+
+body main section.instagram-galery .btnSeeMorePhotos {
+  width: 200px;
+  display: block;
+  margin: 5px auto;
+  padding: 10px;
 }
 
 body footer {
@@ -765,7 +892,7 @@ body footer .footer-header .row .newsletter form input {
 
 body footer .footer-header .row .newsletter form input[type=submit] {
   cursor: pointer;
-  width: 20%;
+  width: 150px;
   height: auto;
   margin: 10px auto;
   background-color: rgba(0, 0, 0, 0);
@@ -857,5 +984,627 @@ body footer .footer-copyright h4 {
   color: #eee;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  body {
+    display: block;
+  }
+  body header.navigation {
+    background-color: transparent !important;
+  }
+  body header.navigation .navigation-container {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: none;
+  }
+  body header.navigation .nav-mobile {
+    display: block;
+    background-color: transparent !important;
+  }
+  body header.navigation .nav-mobile nav {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    background-color: #eee;
+  }
+  body header.navigation .nav-mobile nav .nav-menu {
+    width: 100%;
+    display: none;
+    height: auto;
+  }
+  body header.navigation .nav-mobile nav .nav-menu a {
+    width: 100%;
+    display: block;
+  }
+  body header.navigation .nav-mobile nav .nav-menu a:hover {
+    color: #925505;
+  }
+  body main {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  body main section.image-wrapper {
+    display: block;
+  }
+  body main section.image-wrapper .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main section.image-wrapper .row .col-md-4 {
+    display: block;
+    width: 100%;
+    height: 70vh;
+  }
+  body main .trending-products {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  body main .trending-products .title h2 {
+    font-size: 32px;
+  }
+  body main .trending-products .container-products {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  body main .trending-products .container-products .product-item {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 10px auto;
+  }
+  body main .trending-products .container-products .product-item .product-image {
+    display: block;
+    width: 50vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+  body main .trending-products .container-products .product-item .product-image img {
+    display: block;
+    margin: 0 auto;
+  }
+  body main section.instagram-galery .title {
+    display: block;
+  }
+  body main section.instagram-galery .gallery-container {
+    display: block;
+  }
+  body main section.instagram-galery .gallery-container .row {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col {
+    width: 100%;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "img-insta-1 img-insta-2" "img-insta-3 img-insta-4-mobile" "img-insta-5 img-insta-6" "img-insta-7 img-insta-8";
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-1 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img-insta-1;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-1 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-2 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img-insta-2;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-2 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-3 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: img-insta-3;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-3 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4 {
+    width: 50vw;
+    height: 50vh;
+    display: none;
+    border: 4px solid black;
+    grid-area: img-insta-4;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4-mobile {
+    display: block;
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: img-insta-4-mobile;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4-mobile img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-5 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: img-insta-5;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-5 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-6 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: img-insta-6;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-6 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-7 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: img-insta-7;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-7 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-8 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: img-insta-8;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-8 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-9 {
+    width: 50vw;
+    height: 50vh;
+    display: none;
+    border: 4px solid black;
+    grid-area: img-insta-9;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-9 img {
+    width: 100%;
+  }
+  body main section.instagram-galery a.btnSeeMorePhotos {
+    display: block;
+    width: 200px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+    margin: 10px auto;
+    text-decoration: none;
+    font-size: 24px;
+    color: #3f3e3e;
+  }
+  body footer {
+    display: block;
+  }
+  body footer .footer-header {
+    width: 100%;
+    grid: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body footer .footer-header .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body footer .footer-header .row .col-md-3 {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 292px) {
+  body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  body section.background-image {
+    display: block;
+    width: 100%;
+  }
+  body section.background-image .title {
+    width: 100%;
+  }
+  body section.background-image .title h1 {
+    font-size: 2rem;
+  }
+  body section.background-image .title h3 {
+    font-size: 1rem;
+  }
+  body section.background-image .title .btn-see-producs {
+    display: block;
+  }
+  body section.background-image .title .btn-see-producs a {
+    margin-top: 50px;
+  }
+  body header.navigation {
+    background-color: transparent !important;
+  }
+  body header.navigation .navigation-container {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: none;
+  }
+  body header.navigation .nav-mobile {
+    display: block;
+    background-color: transparent !important;
+  }
+  body header.navigation .nav-mobile nav {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    background-color: #eee;
+  }
+  body header.navigation .nav-mobile nav .nav-menu {
+    width: 100%;
+    display: none;
+    height: auto;
+  }
+  body header.navigation .nav-mobile nav .nav-menu a {
+    width: 100%;
+    display: block;
+  }
+  body header.navigation .nav-mobile nav .nav-menu a:hover {
+    color: #925505;
+  }
+  body main {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  body main section.products-category .title {
+    display: block;
+    text-align: left;
+  }
+  body main section.products-category .category-container {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+        grid-template-areas: 'cat-item-1 cat-item-2';
+  }
+  body main section.products-category .category-container .cat-item {
+    display: block;
+    width: 50vw;
+    height: auto;
+    padding: 10px;
+  }
+  body main section.products-category .category-container #cat-item-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: cat-item-1;
+  }
+  body main section.products-category .category-container #cat-item-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: cat-item-2;
+  }
+  body main section.products-category .category-container #cat-item-3 {
+    display: none;
+  }
+  body main section.products-category .category-container #cat-item-4 {
+    display: none;
+  }
+  body main section.image-wrapper {
+    display: block;
+  }
+  body main section.image-wrapper .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main section.image-wrapper .row .col-md-4 {
+    display: block;
+    width: 100%;
+    height: 70vh;
+  }
+  body main .trending-products {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  body main .trending-products .title h2 {
+    font-size: 32px;
+  }
+  body main .trending-products .container-products {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  body main .trending-products .container-products .product-item {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 10px auto;
+    border: none;
+  }
+  body main .trending-products .container-products .product-item .product-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  body main .trending-products .container-products .product-item .product-image img {
+    display: block;
+    margin: 0 auto;
+  }
+  body main section.instagram-galery .title {
+    display: block;
+  }
+  body main section.instagram-galery .gallery-container {
+    display: block;
+  }
+  body main section.instagram-galery .gallery-container .row {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col {
+    width: 100%;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "img-insta-1 img-insta-2" "img-insta-3 img-insta-4-mobile" "img-insta-5 img-insta-6" "img-insta-7 img-insta-8";
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-1 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img-insta-1;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-1 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-2 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: img-insta-2;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-2 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-3 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: img-insta-3;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-3 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4 {
+    width: 50vw;
+    height: 50vh;
+    display: none;
+    border: 4px solid black;
+    grid-area: img-insta-4;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4-mobile {
+    display: block;
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: img-insta-4-mobile;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-4-mobile img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-5 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: img-insta-5;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-5 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-6 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: img-insta-6;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-6 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-7 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: img-insta-7;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-7 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-8 {
+    width: 50vw;
+    height: 50vh;
+    display: block;
+    border: 4px solid black;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: img-insta-8;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-8 img {
+    width: 100%;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-9 {
+    width: 50vw;
+    height: 50vh;
+    display: none;
+    border: 4px solid black;
+    grid-area: img-insta-9;
+  }
+  body main section.instagram-galery .gallery-container .row .col a#img-9 img {
+    width: 100%;
+  }
+  body main section.instagram-galery a.btnSeeMorePhotos {
+    display: block;
+    width: 200px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+    margin: 10px auto;
+    text-decoration: none;
+    font-size: 24px;
+    color: #3f3e3e;
+  }
 }
 /*# sourceMappingURL=mainStyle.css.map */
