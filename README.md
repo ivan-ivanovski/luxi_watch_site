@@ -8,7 +8,7 @@ I dont done yet responive but will be.
 
 If you want to help me about this project feel free to contact me.
 
-<img src="./img/screencapture-file-E-WEB-2022-Luxyous-site-index-html-2022-07-05-00_08_24.png">
+<img src="./img/screencapture-file-E-WEB-2022-Luxyous-site-index-html-2022-07-05-00_08_24.png" style="width:50%; height:100%; display:block;">
 
 <br>
 
@@ -19,7 +19,7 @@ Created mobile nav
 Responsive for mobile device done using scss 
 Added Js for responsive mobile nav
 
-<img src="./img/screencapture-ivan-ivanovski-github-io-luxi-watch-site-2022-07-07-02_16_17.png">
+<img src="./img/screencapture-ivan-ivanovski-github-io-luxi-watch-site-2022-07-07-02_16_17.png" style="width:50%; height:100%; display:block;">
 
 
 <hr>
