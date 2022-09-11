@@ -8,7 +8,7 @@ I dont done yet responive but will be.
 
 If you want to help me about this project feel free to contact me.
 
-<img src="./img/screencapture-file-E-WEB-2022-Luxyous-site-index-html-2022-07-05-00_08_24.png" style="width:50%; height:100%; display:block;">
+<img src="./img/screencapture-file-E-WEB-2022-Luxyous-site-index-html-2022-07-05-00_08_24.png" style="width:100%; height:100%; display:block;">
 
 <br>
 
